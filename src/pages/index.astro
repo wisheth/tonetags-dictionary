@@ -1,0 +1,36 @@
+---
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import { ToneTags } from "../components/ToneTags";
+
+const indicators = await Astro.glob("./tones/*.{md,mdx}");
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={`${SITE_TITLE} home`} description={SITE_DESCRIPTION} />
+  </head>
+
+  <div class="h-full text-center flex select-none all:transition-400">
+    <div class="ma">
+      <div
+        class="text-5xl fw100 animate-fade-in animate-count-1 animate-duration-1s"
+      >
+        Tone tags
+      </div>
+
+      <div class="flex justify-center items-center h-screen">
+        <div class="mb-48">
+          <ToneTags posts={indicators} />
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-5 right-0 left-0 text-center op80 fw300">
+      <Footer />
+    </div>
+  </div>
+
+
+</html>
