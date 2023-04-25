@@ -19,6 +19,8 @@ export default defineConfig({
     },
     colors: {
       uwuPink: "#f8b0c9",
+      red: "#e96373",
+      blue: "#9fd7ee",
       themeBlack: "#121212",
     },
   },
