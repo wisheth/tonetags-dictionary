@@ -4,6 +4,7 @@ export interface IToneTag {
     tag: string;
     fullForm: string;
     addedBy: string;
+    popular: boolean;
     draft?: boolean;
   };
 }
